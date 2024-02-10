@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Azure Blob Storage z Flask</title>
+</head>
+<body>
+    <h1>Przesyłanie do Azure Blob Storage</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <h2>Pliki:</h2>
+    <ul>
+        {% for blob in blobs %}
+            <li>{{ blob.name }} - <a href="{{ url_for('download', blob_name=blob.name) }}">Pobierz</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
