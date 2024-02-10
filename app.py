@@ -15,7 +15,7 @@ container_client = blob_service_client.get_container_client(CONTAINER_NAME)
 
 #cosmosDB
 COSMOS_ENDPOINT = 'https://zad7.documents.azure.com:443/'
-COSMOS_KEY = os.getenv('qimST7O7eWTAVUIaztBGB4Hli1Vyb1rMYpTJAA8eqHm6J4NbPPU8lh2MI9aXLDckJord7mb2G6RlACDbps9TbA==')
+COSMOS_KEY = 'qimST7O7eWTAVUIaztBGB4Hli1Vyb1rMYpTJAA8eqHm6J4NbPPU8lh2MI9aXLDckJord7mb2G6RlACDbps9TbA=='
 COSMOS_DATABASE_ID = 'Files'
 COSMOS_CONTAINER_ID = 'Metadata'
 cosmos_client = CosmosClient(COSMOS_ENDPOINT, COSMOS_KEY)
